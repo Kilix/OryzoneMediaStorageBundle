@@ -38,7 +38,7 @@ class MediaStorageExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'getMediaStorage' => new \Twig_Function_Method($this, 'getMediaStorage')
+            'getMediaStorage' => new \Twig_SimpleFunction('getMediaStorage',$this)
         );
     }
 
@@ -49,8 +49,8 @@ class MediaStorageExtension extends \Twig_Extension
     {
         return array
         (
-            'mediaUrl'      => new \Twig_Filter_Method($this, 'mediaUrl'),
-            'mediaRender'   => new \Twig_Filter_Method($this, 'mediaRender', array( 'is_safe' => array('html')) )
+            'mediaUrl'      => new \Twig_SimpleFilter('mediaUrl', $this),
+            'mediaRender'   => new \Twig_SimpleFilter('mediaRender', $this, array( 'is_safe' => array('html')) )
         );
     }
 
