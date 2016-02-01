@@ -114,3 +114,5 @@ Thanks
 .. _github issues for the repository: https://github.com/Oryzone/OryzoneMediaStorageBundle/issues
 
 .. _forking the repository: https://github.com/Oryzone/OryzoneMediaStorageBundle/fork_select
+
+TEST
